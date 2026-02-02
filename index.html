@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laundry Services</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("Oi82uEHlrEwjGjFEO");
+    })();
+  </script>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="logo">Logo</div>
+      <nav>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div id="username">Username</div>
+    </header>
+
+    <!-- Hero-Section  -->
+    <section id="hero-section">
+      <div class="left-side">
+        <h1>
+          Revitalize Your <br />
+          Clothes with Expert <br />
+          <span>Laundry Services!</span>
+        </h1>
+        <p>
+          From premium dry cleaning to swift wash and fold, we deliver care and
+          convenience. Schedule a pickup and rediscover the freshness of your
+          clothes today.
+        </p>
+        <button
+          onclick="location.href='#service-cart-wrapper'"
+          id="book-service"
+        >
+          <span class="material-icons-outlined">event</span> Book Your Service
+          today!
+        </button>
+      </div>
+      <div class="right-side">
+        <img
+          src="https://cdn3d.iconscout.com/3d/premium/thumb/laundry-3d-icon-png-download-8530782.png"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achivment">
+      <div class="achivment">
+        <h2>Our Achivment</h2>
+        <div class="detaile">
+          <div>
+            <span>15+</span>
+            <p>Laundry Services</p>
+          </div>
+          <div>
+            <span>240+</span>
+            <p>Happy Customers</p>
+          </div>
+          <div>
+            <span>2+ Yrs</span>
+            <p>Experience</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service -->
+    <section id="service-cart-wrapper">
+      <div class="page">
+        <div class="card services">
+          <div class="heading">
+            <h2>Our Services</h2>
+            <p class="sub-text">
+              Click On The Add To Cart Button To Add The Services To Your Cart
+            </p>
+          </div>
+
+          <!-- Services -->
+          <div class="service-row">
+            <div class="service-name">🧺 Dry Cleaning</div>
+            <div class="price">₹200</div>
+            <button class="btn">
+              Add Item
+              <span class="material-icons-outlined">add_circle_outline</span>
+            </button>
+          </div>
+
+          <div class="service-row">
+            <div class="service-name">👕 Wash & Fold</div>
+            <div class="price">₹100</div>
+            <button class="btn">
+              Add Item
+              <span class="material-icons-outlined">add_circle_outline</span>
+            </button>
+          </div>
+
+          <div class="service-row">
+            <div class="service-name">🧼 Ironing</div>
+            <div class="price">₹30</div>
+            <button class="btn">
+              Add Item
+              <span class="material-icons-outlined">add_circle_outline</span>
+            </button>
+          </div>
+
+          <div class="service-row">
+            <div class="service-name">🧴 Stain Removal</div>
+            <div class="price">₹500</div>
+            <button class="btn">
+              Add Item
+              <span class="material-icons-outlined">add_circle_outline</span>
+            </button>
+          </div>
+
+          <div class="service-row">
+            <div class="service-name">🟤 Leather & Suede Cleaning</div>
+            <div class="price">₹999</div>
+            <button class="btn">
+              Add Item
+              <span class="material-icons-outlined">add_circle_outline</span>
+            </button>
+          </div>
+
+          <div class="info">
+            <span class="material-icons-outlined info-icon">info</span>
+            <div>Add the items to the cart and book now</div>
+          </div>
+        </div>
+
+        <!-- Added Cart Items  -->
+        <div class="card cart">
+          <div class="cart-items">
+            <div class="add-item-heading"><h2>Added Items</h2></div>
+            <table>
+              <thead>
+                <tr>
+                  <th>S.No</th>
+                  <th>Service Name</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody id="cart-body">
+                <!-- Added Item Will Show Here  -->
+              </tbody>
+            </table>
+
+            <div class="no-item-message">
+              <span class="material-icons-outlined info-icon">info</span>
+              <h3>No Items Added</h3>
+              <p>Add items to the cart from the services bar</p>
+            </div>
+
+            <div class="total">
+              <span>Total Amount</span>
+              <span id="total-amount">₹0</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card booking-form">
+          <h4>Book Now</h4>
+          <input type="text" id="full-name" placeholder="Full Name" />
+          <div class="row">
+            <input type="email" id="email" placeholder="Email ID" />
+            <input type="text" id="phone" placeholder="Phone Number" />
+          </div>
+          <button class="book-btn" id="book-btn">Book now</button>
+          <p id="booking-msg"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About-services  -->
+    <section id="about-services">
+      <div class="box">
+        <span class="material-icons-outlined feature-icon">
+          local_laundry_service
+        </span>
+        <h3>Premium Services</h3>
+        <p>
+          Elevate your wardrobe with our meticulous dry cleaning, ensuring
+          garments look and feel as good as new.
+        </p>
+      </div>
+      <div class="box">
+        <span class="material-icons-outlined">support_agent</span>
+        <h3>Quick Support</h3>
+        <p>
+          We're committed to providing prompt solutions to ensure your
+          experience is smooth and worry-free.
+        </p>
+      </div>
+      <div class="box">
+        <span class="material-icons-outlined feature-icon">
+          local_shipping
+        </span>
+        <h3>Hassle Free Delivery</h3>
+        <p>
+          Enjoy seamless service with our convenient pickup and delivery
+          options, tailored to your schedule.
+        </p>
+      </div>
+      <div class="box">
+        <span class="material-icons-outlined feature-icon"> inventory_2 </span>
+        <h3>Affordable Prices</h3>
+        <p>
+          Experience exceptional care without breaking the bank – our affordable
+          prices make laundry day stress-free.
+        </p>
+      </div>
+    </section>
+
+    <!-- About-newsletter  -->
+    <section id="newsletter">
+      <h2>Subscribe to our Newsletter</h2>
+      <div class="form">
+        <input type="text" placeholder="Full name" />
+        <input type="text" placeholder="Email" />
+        <button>Subscribe</button>
+      </div>
+    </section>
+
+    <!-- Footer  -->
+    <footer id="footer">
+      <div class="infos">
+        <h3>Logo</h3>
+        <p>About us Lorem Ipsum Dolor Sit Amet Consectetur. Sed At Congue.</p>
+      </div>
+      <div class="infos">
+        <h3>Important Links</h3>
+        <p>About us Contact us Privacy Policy Terms of use Refund Policy</p>
+      </div>
+      <div class="infos">
+        <h3>Contact</h3>
+        <p>mail@site.com</p>
+        <p>+9100000000</p>
+      </div>
+      <div class="infos">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" />
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" />
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" />
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" />
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

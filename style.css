@@ -154,6 +154,10 @@ nav h4 {
   max-width: 1200px;
   margin: auto;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-direction: row ; */
+  /* border: 1px solid black; */
   gap: 30px;
 }
 
